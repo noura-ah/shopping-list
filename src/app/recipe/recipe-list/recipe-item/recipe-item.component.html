@@ -1,0 +1,8 @@
+<a class="" [routerLink]="index">
+    <div class="border rounded p-3 cursor-pointer hover:bg-gray-300" routerLinkActive="bg-gray-200">
+        <h4 class="text-2xl font-bold">{{ recipe.name }}</h4>
+        <p>{{ recipe.desc}}
+            <span><img style="max-height: 50px;" [src]="recipe.imgPath" /></span>
+        </p>
+    </div>
+</a>

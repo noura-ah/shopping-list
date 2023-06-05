@@ -1,0 +1,10 @@
+<div class="flex">
+    <div class="flex-1">
+        <app-recipe-list ></app-recipe-list>
+    </div>
+    <div class="">
+        <!-- <app-recipe-details [recipe]="chosenRecipe" *ngIf="chosenRecipe; else showMsg"></app-recipe-details>
+        <ng-template #showMsg ><div class="text-1xl font-bold mt-9 ">Please Choose a recipe</div></ng-template> -->
+        <router-outlet></router-outlet>
+    </div>
+</div>

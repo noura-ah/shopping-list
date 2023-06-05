@@ -1,0 +1,34 @@
+<div class="m-2">
+    <div>
+        <img [src]="recipe.imgPath" style="max-height: 100px;"/>
+    </div>
+</div>
+
+<div>
+    <div>
+        <div>
+            <!-- <button type="button" class="bg-blue-500 text-white m-2 py-1 px-2 rounded">
+            </button> -->
+            <ul>
+                <a class="bg-blue-500 text-white m-1 py-2 px-2 rounded text-xs"  (click)="onAddToShoppingList()">To Shopping List</a>
+                <a class="bg-blue-500 text-white m-1 py-2 px-2 rounded text-xs" [routerLink]="['edit']">Edit Recipe</a>
+                <a class="bg-blue-500 text-white m-1 py-2 px-2 rounded text-xs" >Delete Recipe</a>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="m-2">
+    <div>
+        <h1 class="text-1xl">Name: {{ recipe.name }}</h1>
+    </div>
+</div>
+<div class="m-2">
+    <div>
+        Description: {{ recipe.desc }}
+    </div>
+</div>
+<div class="m-2">
+    <div *ngFor="let ingrdient of recipe.ingrdients">
+        {{ingrdient.name}} ({{ingrdient.amount}})
+    </div>
+</div>

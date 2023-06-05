@@ -1,0 +1,11 @@
+<div class="m-2">
+    <div>
+        <a routerLink="new" class="bg-blue-500 text-white m-1 py-2 px-3 rounded text-xs">New Recipe</a>
+    </div>
+</div>
+<div class="m-2">
+    <div>
+        <app-recipe-item *ngFor="let recipe of recipes; let i= index" [recipe]="recipe" [index]="i"
+            (click)="onChooseRecipe(recipe)"></app-recipe-item>
+    </div>
+</div>

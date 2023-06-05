@@ -1,0 +1,13 @@
+<div>
+    <div>
+        <app-shopping-edit (ingredientAdded)="onAddItem($event)"></app-shopping-edit>
+        <hr>
+        <ul class="m-2">
+            <div class="border rounded-md p-4 mt-2 cursor-pointer"  (click)="onEditItem(i)" *ngFor="let ingredient of ingredients; let i = index">
+                <a>
+                    {{ ingredient.name }} ({{ ingredient.amount }})
+                </a>
+            </div>
+        </ul>
+    </div>
+</div>

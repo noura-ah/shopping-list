@@ -1,0 +1,22 @@
+<div class="m-3">
+    <div>
+        <form (ngSubmit)="onAdd(f)" #f="ngForm">
+            <div class="mt-2">
+                <label class="mx-3">Name:</label>
+                <input class="border border-1 border-grey px-2" id="name" name="name" ngModel  required>
+
+                <label class="mx-2">Amount:</label>
+                <input class="border border-1 border-grey px-2" id="amount" type="number" name="amount"
+                 pattern="^[1-9]+[0-9]*$" ngModel required/>
+            </div>
+            <div class="mt-2">
+                <div>
+                    <button class="bg-blue-500 text-white m-1 py-2 px-3 rounded" type="submit"
+                    [disabled]="!f.valid">Add</button>
+                    <button class="bg-red-500 text-white m-1 py-2 px-3 rounded" type="submit" *ngIf="editMode" (click)="onDelete()">Delete</button>
+                    <button class="bg-green-500 text-white m-1 py-2 px-3 rounded" type="submit" (click)="onClear()" >Clear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
