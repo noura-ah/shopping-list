@@ -17,7 +17,8 @@ export class RecipeService {
      [new Ingredient('orange',3),new Ingredient('potatos',5)])
   ]
   
-  @Output() recipeDetails = new Subject<Recipe>()
+  recipeDetails = new Subject<Recipe>()
+  listChanged =new Subject<Recipe[]>()
   
   constructor() { }
 
@@ -28,6 +29,21 @@ export class RecipeService {
 
   getRecipe(id:number){
     return this.recipes[id]
+  }
+
+  addRecipe(recipe: Recipe){
+    this.recipes.push(recipe)
+    this.listChanged.next(this.recipes.slice())
+  }
+
+  updateRecipe(recipe:Recipe, id: number){
+    this.recipes[id]= recipe
+    this.listChanged.next(this.recipes.slice())
+  }
+
+  deleteRecipe(id:number){
+    this.recipes.splice(id,1)
+    this.listChanged.next(this.recipes.slice())
   }
 
 

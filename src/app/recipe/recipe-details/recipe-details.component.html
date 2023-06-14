@@ -10,9 +10,9 @@
             <!-- <button type="button" class="bg-blue-500 text-white m-2 py-1 px-2 rounded">
             </button> -->
             <ul>
-                <a class="bg-blue-500 text-white m-1 py-2 px-2 rounded text-xs"  (click)="onAddToShoppingList()">To Shopping List</a>
+                <a class="bg-blue-500 text-white m-1 py-2 px-2 rounded text-xs cursor-pointer"  (click)="onAddToShoppingList()">To Shopping List</a>
                 <a class="bg-blue-500 text-white m-1 py-2 px-2 rounded text-xs" [routerLink]="['edit']">Edit Recipe</a>
-                <a class="bg-blue-500 text-white m-1 py-2 px-2 rounded text-xs" >Delete Recipe</a>
+                <a class="bg-blue-500 text-white m-1 py-2 px-2 rounded text-xs cursor-pointer" (click)="onDelete()" >Delete Recipe</a>
             </ul>
         </div>
     </div>
